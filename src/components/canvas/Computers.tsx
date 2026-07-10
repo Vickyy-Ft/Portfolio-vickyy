@@ -7,6 +7,24 @@ import CanvasLoader from "../layout/Loader";
 const Computers: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
+  useEffect(() => {
+    // Traverse the 3D model and change the materials to white
+    computer.scene.traverse((child: any) => {
+      if (child.isMesh && child.material && child.material.color) {
+        // We can check if the material is originally dark, or just force common materials to white.
+        // A lot of the case and keyboard materials are dark grays/blacks.
+        const r = child.material.color.r;
+        const g = child.material.color.g;
+        const b = child.material.color.b;
+        
+        // If the color is quite dark, change it to white
+        if (r < 0.2 && g < 0.2 && b < 0.2) {
+          child.material.color.setHex(0xffffff);
+        }
+      }
+    });
+  }, [computer.scene]);
+
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor="black" />
