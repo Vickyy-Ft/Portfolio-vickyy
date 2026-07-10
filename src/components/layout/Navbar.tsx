@@ -9,15 +9,11 @@ import { config } from "../../constants/config";
 const Navbar = () => {
   const [active, setActive] = useState<string | null>();
   const [toggle, setToggle] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      if (scrollTop <= 100) {
         setActive("");
       }
     };
@@ -52,9 +48,7 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } fixed top-0 z-20 flex w-full items-center py-5 transition-all duration-300 ${
-        scrolled ? "bg-primary/80 backdrop-blur-md border-b border-white/10 shadow-lg" : "bg-transparent"
-      }`}
+      } fixed top-0 z-20 flex w-full items-center py-5 transition-all duration-300 bg-primary/80 backdrop-blur-md border-b border-white/10 shadow-lg`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         <Link
