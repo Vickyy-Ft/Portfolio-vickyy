@@ -71,11 +71,12 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `I'm a motivated Full-Stack Developer with hands-on experience building AI-powered
-      applications, cloud-hosted web solutions, and database-driven systems. Skilled in Python,
-      Java, React.js, AWS, and API integration — I'm passionate about creating scalable applications,
-      intelligent automation systems, and cloud-native solutions that solve real-world problems.
-      Let's build something great together!`,
+      content: `Full-Stack Developer and AI Agent Builder with hands-on experience designing serverless AWS 
+      architectures, agentic AI systems, and workflow automation pipelines. Skilled in Python, Java, React.js, 
+      AWS (Lambda, S3, DynamoDB, Bedrock, API Gateway, CloudFront, Cognito), LLM integration (Amazon Bedrock, 
+      Groq/LLaMA 3.3 70B, Ollama), and n8n-based orchestration. Passionate about building intelligent, scalable, 
+      production-style applications. Active in the tech community — hosted AWS workshops, attended AWS Community 
+      Day Bengaluru 2026, participated in hackathons. Let's build something great together!`,
     },
     experience: {
       p: "My Academic Journey",
@@ -89,9 +90,11 @@ export const config: TConfig = {
       p: "My work",
       h2: "Projects.",
       content: `Here are some of the projects I've built — each one demonstrates my skills across
-    AI agent development, cloud deployment, and full-stack engineering. From integrating
-    LLMs and Google APIs to deploying React apps on AWS and building MVC web systems in Java,
-    these projects reflect my ability to work across the full technology stack.`,
+    AI agent development, serverless cloud deployment, and full-stack engineering. From building 
+    cross-region serverless architectures with AWS Bedrock and Lambda, to creating agentic AI systems 
+    with n8n orchestration and LLaMA 3.3 70B, to deploying production-ready streaming platforms and 
+    Java MVC systems — these projects reflect my ability to work across the full technology stack 
+    and deliver intelligent, scalable solutions.`,
     },
   },
 };

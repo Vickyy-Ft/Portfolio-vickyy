@@ -129,9 +129,34 @@ const experiences: TExperience[] = [
     date: "2021 – 2025",
     points: [
       "Pursuing Bachelor of Technology in Information Technology from Karpagam Institute of Technology, Coimbatore, India.",
-      "Achieved a CGPA of 7.7/10 with a strong focus on software engineering and cloud computing.",
+      "Achieved a CGPA of 8.2/10 with a strong focus on software engineering and cloud computing.",
       "Developed hands-on skills in full-stack development, database systems, and AI application building.",
       "Completed major projects in AI agent development, cloud-hosted web apps, and Java MVC systems.",
+      "Hosted hands-on AWS workshop on building AI-powered FAQ chatbot for CloudWeld – AWS User Group at Karpagam Institute of Technology.",
+    ],
+  },
+  {
+    title: "AWS Builders Skill Sprint – AI Agents",
+    companyName: "Amazon Web Services",
+    icon: kit,
+    iconBg: "#FF9900",
+    date: "Jul 2026",
+    points: [
+      "Built a Local LLM-Powered Intelligent Assistant using Python, Ollama, MCP, Mem0, FAISS, and Strands SDK.",
+      "Implemented streaming responses and retrieval-augmented knowledge base for context-aware interactions.",
+      "Created a memory-retaining AI assistant extensible with external tools and knowledge sources via Model Context Protocol.",
+    ],
+  },
+  {
+    title: "AWS Builders Skill Sprint – DevOps Challenge",
+    companyName: "Amazon Web Services",
+    icon: kit,
+    iconBg: "#FF9900",
+    date: "2026",
+    points: [
+      "Completed hands-on DevOps challenge focusing on CI/CD pipelines and cloud automation.",
+      "Gained practical experience with AWS DevOps tools and best practices.",
+      "Applied learned concepts to automate deployments with GitHub Actions in personal projects.",
     ],
   },
   {
@@ -175,7 +200,7 @@ const experiences: TExperience[] = [
 const testimonials: TTestimonial[] = [
   {
     testimonial:
-      "REST APIs, MVC Architecture, Object-Oriented Programming — the backbone of every robust application I build.",
+      "REST APIs, MVC Architecture, Object-Oriented Programming, Serverless Architecture — the backbone of every robust application I build.",
     name: "Core Concepts",
     designation: "Software Engineering",
     company: "Fundamentals",
@@ -183,38 +208,46 @@ const testimonials: TTestimonial[] = [
   },
   {
     testimonial:
-      "AWS S3, EC2, IAM — deploying cloud-native applications and managing scalable infrastructure is where I thrive.",
-    name: "Cloud Deployment",
+      "AWS Lambda, S3, API Gateway, DynamoDB, CloudFront, Cognito, IAM, CloudWatch, Amplify — deploying cloud-native serverless applications is where I thrive.",
+    name: "Cloud & DevOps",
     designation: "AWS Cloud",
     company: "Infrastructure",
     image: "https://ui-avatars.com/api/?name=AWS&background=FF9900&color=fff",
   },
   {
     testimonial:
-      "Integrating LLMs, REST APIs, and memory management systems to build truly intelligent AI-powered solutions.",
+      "Amazon Bedrock, Groq, LLaMA 3.3 70B, Ollama, MCP, Mem0, FAISS, n8n — building intelligent, agentic AI systems with memory and tool integration.",
     name: "AI & Automation",
     designation: "AI Agent Development",
     company: "Intelligence Layer",
     image: "https://ui-avatars.com/api/?name=AI&background=00b4d8&color=fff",
   },
+  {
+    testimonial:
+      "Active AWS User Group Madurai member, attended AWS Community Day Bengaluru 2026, hackathon participant, workshop host — passionate about community and knowledge sharing.",
+    name: "Leadership & Community",
+    designation: "Community Engagement",
+    company: "Tech Community",
+    image: "https://ui-avatars.com/api/?name=LC&background=06b6d4&color=fff",
+  },
 ];
 
 const projects: TProject[] = [
   {
-    name: "BayBot – Personal AI Assistant",
+    name: "Roast My Project – AI Feedback Platform",
     description:
-      "A local-first AI assistant integrating Google Drive, Gmail, and Google Calendar APIs. Features memory management, personalized user preference learning, and LLM-powered natural language interaction.",
+      "Full-stack app delivering structured AI feedback via Amazon Bedrock Nova Lite with 7 AI personalities and Battle Mode. Cross-region serverless architecture: React/Vite on AWS Amplify, Flask (Mangum) on Lambda, DynamoDB, Mumbai→Virginia Bedrock calls.",
     tags: [
       {
-        name: "python",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "llm",
+        name: "aws-bedrock",
         color: "green-text-gradient",
       },
       {
-        name: "sqlite",
+        name: "lambda",
         color: "pink-text-gradient",
       },
     ],
@@ -222,20 +255,20 @@ const projects: TProject[] = [
     sourceCodeLink: "https://github.com/Vickyy-Ft",
   },
   {
-    name: "Cloud Meal Search Platform",
+    name: "MovFlix – Serverless Video Streaming",
     description:
-      "A cloud-hosted meal search platform built with React.js and deployed on AWS S3. Integrates the MealDB API to dynamically retrieve and display 1000+ recipes with an optimized, responsive frontend.",
+      "Production-style streaming platform using S3, CloudFront, Lambda (Node.js 20.x), API Gateway, DynamoDB, Cognito JWT auth. Least-privilege IAM, CloudWatch monitoring, GitHub Actions CI/CD.",
     tags: [
       {
-        name: "react",
+        name: "aws-lambda",
         color: "blue-text-gradient",
       },
       {
-        name: "aws-s3",
+        name: "cloudfront",
         color: "green-text-gradient",
       },
       {
-        name: "tailwindcss",
+        name: "dynamodb",
         color: "pink-text-gradient",
       },
     ],
@@ -243,9 +276,72 @@ const projects: TProject[] = [
     sourceCodeLink: "https://github.com/Vickyy-Ft",
   },
   {
+    name: "Nexus – Agentic AI Assistant",
+    description:
+      "Unified agentic assistant routing natural-language requests to Gmail, Drive, and Calendar through custom n8n orchestration. Groq (LLaMA 3.3 70B) for intent detection, React/Vite frontend with dynamic Tool Cards.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "n8n",
+        color: "green-text-gradient",
+      },
+      {
+        name: "llama",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: baybot,
+    sourceCodeLink: "https://github.com/Vickyy-Ft",
+  },
+  {
+    name: "AI Email Assistant",
+    description:
+      "n8n workflow classifying Gmail messages into 5 categories via LLaMA 3.3 70B with confidence scoring. Auto-sends high-confidence replies, drafts others. Calendar integration for meeting slots, Sheets logging, weekly AI summary reports.",
+    tags: [
+      {
+        name: "n8n",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "groq",
+        color: "green-text-gradient",
+      },
+      {
+        name: "gmail-api",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: baybot,
+    sourceCodeLink: "https://github.com/Vickyy-Ft",
+  },
+  {
+    name: "Local LLM Intelligent Assistant",
+    description:
+      "Local, memory-retaining AI assistant extensible with MCP tools and knowledge sources. Built with Python, Ollama, Mem0, FAISS, Strands SDK. Features streaming responses and retrieval-augmented knowledge base for AWS Builders Skill Sprint.",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "ollama",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mcp",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: baybot,
+    sourceCodeLink: "https://github.com/Vickyy-Ft",
+  },
+  {
     name: "Restaurant Reservation & Ordering",
     description:
-      "A full-featured restaurant reservation and food ordering platform using Java MVC architecture with JSP, Servlets, and SQL. Features secure order processing, menu management, and reservation handling.",
+      "Full-stack Java reservation and ordering platform with admin dashboard, role-based access, and reporting module using advanced SQL queries. Iteratively redesigned database schema and debugged authentication flows.",
     tags: [
       {
         name: "java",
@@ -261,6 +357,27 @@ const projects: TProject[] = [
       },
     ],
     image: restaurant,
+    sourceCodeLink: "https://github.com/Vickyy-Ft",
+  },
+  {
+    name: "MealExplorer – Cloud Deployment",
+    description:
+      "Glassmorphism-styled recipe app with React Router and distraction-free Chef Mode using React Portals. Integrates TheMealDB API. Manually deployed production build to AWS S3 static hosting for hands-on cloud experience.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "aws-s3",
+        color: "green-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: cloudapp,
     sourceCodeLink: "https://github.com/Vickyy-Ft",
   },
 ];
